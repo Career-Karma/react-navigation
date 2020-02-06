@@ -41,12 +41,9 @@ const getParamsFromPath = (inputParams, pathMatch, pathMatchKeys) => {
 };
 
 const getRestOfPath = (pathMatch, pathMatchKeys) => {
-  console.log('<---------- getRestOfPath ---------->')
-  console.log('pathMatchKeys', pathMatchKeys)
-  console.log('pathMatch', pathMatch)
+  // PRIOR TO FIX, IT WAS:
   // const rest = pathMatch[pathMatchKeys.findIndex(k => k.asterisk) + 1];
   const rest = pathMatch.slice(pathMatchKeys.findIndex(k => k.asterisk) + 1).join('/');
-  console.log('rest', rest)
   return rest;
 };
 
